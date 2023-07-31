@@ -1,0 +1,117 @@
+/* Reset default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: #111;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section */
+.header {
+    background-color: #333;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    color: #f39c12;
+}
+
+.title {
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #f39c12;
+    margin-top: 10px;
+}
+
+.github-icon {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.github-icon a {
+    color: #f39c12;
+}
+
+.github-icon a:hover {
+    color: #e67e22;
+}
+
+/* Main Section */
+.main {
+    padding: 20px;
+}
+
+.project-list h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.project {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #222;
+    border-radius: 5px;
+}
+
+.project h3 {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.project a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.github-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.github-link:hover {
+    background-color: #e67e22;
+}
