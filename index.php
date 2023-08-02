@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RTLParker.xyz - Projects</title>
-    <link rel="stylesheet" href="styles_projects.css">
+    <meta name="description" content="Income Estimation Tool for internal use by rtlparker">
+    <meta name="author" content="rtlparker.xyz">
+    <title>Income Estimation Tool | rtlparker.xyz</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
       <!-- Google Analytics -->
@@ -19,56 +23,50 @@
     </script>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/projects/index.php">Projects</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        <h1>Income Estimation Tool</h1>
+        <p class="disclaimer">Disclaimer: This income estimation tool is for general informational purposes only and should not be considered official financial advice. It follows the rough guidelines for UK tax law, but it is not endorsed or reviewed by HM Revenue and Customs (HMRC). Please consult with a qualified tax professional for personalized tax advice.</p>
+        <form id="income-form">
+            <label for="income">Enter your rough monthly income:</label>
+            <input type="number" id="income" name="income" required placeholder="e.g., 2000">
 
-            <h1 class="title">RTLParker.xyz</h1>
-            <p class="subtitle">A playground for web developers</p>
-            <div class="github-icon">
-                <a href="https://github.com/rtlparker" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                </a>
+            <label for="currency">Select currency:</label>
+            <select id="currency" name="currency">
+                <option value="GBP">£ (GBP)</option>
+                <option value="USD">$ (USD)</option>
+                <option value="EUR">€ (EUR)</option>
+                <option value="JPY">¥ (JPY)</option>
+                <option value="CAD">$ (CAD)</option>
+                <option value="AUD">$ (AUD)</option>
+            </select>
+
+            <div class="buttons-container">
+                <button type="submit" class="calculate-btn" id="calculate-btn">Calculate Turnover</button>
+                <button type="button" class="clear-btn" id="clear-btn">Clear</button>
             </div>
-        </div>
-    </header>
+        </form>
 
-    <main class="main">
-        <div class="container">
-            <section class="project-list">
-                <h2>Projects</h2>
-                <div class="project">
-                    <h3>Turnover Calculator</h3>
-                    <p>A turnover calculator that lets you input monthly income and see how much that is after 12 months.</p>
-                    <a href="turnover-calculator.rtlparker.xyz">View Project</a>
-                    <a class="github-link" href="https://github.com/rtlparker/turnover-calculator" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </div>
-                <div class="project">
-                    <h3>Magic 8 ball</h3>
-                    <p>A basic magic 8 ball.</p>
-                    <a href="https://magic8.rtlparker.xyz">View Project</a>
-                    <a class="github-link" href="https://github.com/rtlparker/turnover-calculator" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </div>
-            </section>
-        </div>
-    </main>
+        <div class="result" id="result"></div>
+        <button id="save-btn">Save as Text File</button>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <?php echo date('Y'); ?> RTLParker.xyz | All rights reserved.</p>
-        </div>
-    </footer>
+        <p class="notice">Note: We do not save or cache any data unless absolutely necessary for the calculation process. Any temporarily stored data is deleted once it's no longer needed.</p>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+        <div class="version-info">
+            <p><strong>Version:</strong> 1.1.0</p>
+            <p><strong>Last Updated:</strong> July 30, 2023</p>
+        </div>
+
+        <div class="patch-notes">
+            <h3>Patch Notes:</h3>
+            <ul>
+                <li>Added additional currency options.</li>
+                <li>Styling improvements for better user experience.</li>
+                <li>Added "Last Updated" and version information.</li>
+                <li>Fixed minor bugs.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
 </body>
-
 </html>
